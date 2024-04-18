@@ -1,23 +1,18 @@
+import com.aluracursos.screematch.modelos.Pelicula;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
-        miPelicula.nombre = "Vivo o muerto: el expediente García";
-        miPelicula.fechaDeLanzamiento = 2024;
-        miPelicula.duracionEnMinutos = 160;
+        miPelicula.setNombre("Vivo o muerto: el expediente García");
+        miPelicula.setFechaDeLanzamiento(2024);
+        miPelicula.setDuracionEnMinutos(160);
+        miPelicula.setIncluidoEnElPlan(true);
 
         miPelicula.nuestraFichaTecnica();
         miPelicula.evalua(10);
         miPelicula.evalua(10);
-
-        System.out.println("suma de las evaluaciones: "+miPelicula.sumaDeLasEvaluaciones);
-        System.out.println("Total de las evaluaciones hechas: "+miPelicula.totalDeLasEvaluaciones);
+        miPelicula.evalua(7.8);
+        System.out.println("Total de las evaluaciones hechas: "+miPelicula.getTotalDeLasEvaluaciones());
         System.out.println("El valor total de la media de las evaluaciones es: "+miPelicula.calculaMedia());
-
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.nombre = "Matrix";
-        otraPelicula.fechaDeLanzamiento = 1999;
-        otraPelicula.duracionEnMinutos = 250;
-
-        otraPelicula.nuestraFichaTecnica();
     }
 }
