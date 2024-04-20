@@ -1,4 +1,4 @@
-package com.aluracursos.screematch.modelos;
+package com.aluracursos.screenmatch.modelos;
 
 public class Serie extends Titulo{
     int temporadas;
@@ -7,7 +7,7 @@ public class Serie extends Titulo{
 
     @Override
     public int getDuracionEnMinutos() {
-        return super.getDuracionEnMinutos();
+        return temporadas * episodiosPorTemporada *minutosPorEpisodio;
     }
 
     public int getTemporadas() {
