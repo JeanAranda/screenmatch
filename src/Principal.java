@@ -4,6 +4,8 @@ import com.aluracursos.screenmatch.modelos.Episodio;
 import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 
+import java.util.ArrayList;
+
 public class Principal {
     public static void main(String[] args) {
         Pelicula miPelicula = new Pelicula();
@@ -50,5 +52,20 @@ public class Principal {
         episodio.setTotalVisualizaciones(300);
 
         filtroRecomendacion.filtra(episodio);
+
+        var peliculaDeJean = new Pelicula();
+        peliculaDeJean.setNombre("Rapidos y furiosos");
+        peliculaDeJean.setDuracionEnMinutos(200);
+        peliculaDeJean.setFechaDeLanzamiento(2001);
+
+        ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
+        listaDePeliculas.add(peliculaDeJean);
+        listaDePeliculas.add(miPelicula);
+        listaDePeliculas.add(otraPelicula);
+
+        System.out.println("Tamaño mayor de la lista: "+ listaDePeliculas.size());
+        System.out.println("La primera pelicula es: "+listaDePeliculas.get(0).getNombre());
+        System.out.println(listaDePeliculas);
+        System.out.println("toString de la pelicula: "+listaDePeliculas.get(0).toString());
     }
 }
