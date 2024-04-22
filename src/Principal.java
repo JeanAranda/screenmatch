@@ -8,9 +8,7 @@ import java.util.ArrayList;
 
 public class Principal {
     public static void main(String[] args) {
-        Pelicula miPelicula = new Pelicula();
-        miPelicula.setNombre("Vivo o muerto: el expediente García");
-        miPelicula.setFechaDeLanzamiento(2024);
+        Pelicula miPelicula = new Pelicula("Vivo o muerto: el expediente García", 2024);
         miPelicula.setDuracionEnMinutos(160);
         miPelicula.setIncluidoEnElPlan(true);
 
@@ -21,18 +19,14 @@ public class Principal {
         System.out.println("Total de las evaluaciones hechas: "+miPelicula.getTotalDeLasEvaluaciones());
         System.out.println("El valor total de la media de las evaluaciones es: "+miPelicula.calculaMedia());
 
-        Serie casaDragon = new Serie();
-        casaDragon.setNombre("La casa del dragon");
-        casaDragon.setFechaDeLanzamiento(2022);
+        Serie casaDragon = new Serie("La casa del dragon", 2022);
         casaDragon.setTemporadas(1);
         casaDragon.setMinutosPorEpisodio(50);
         casaDragon.setEpisodiosPorTemporada(10);
         casaDragon.muestraFichaTecnica();
         System.out.println(casaDragon.getDuracionEnMinutos());
 
-        Pelicula otraPelicula = new Pelicula();
-        otraPelicula.setNombre("Matrix");
-        otraPelicula.setFechaDeLanzamiento(1999);
+        Pelicula otraPelicula = new Pelicula("Matrix", 1999);
         otraPelicula.setDuracionEnMinutos(180);
         otraPelicula.muestraFichaTecnica();
 
@@ -53,10 +47,8 @@ public class Principal {
 
         filtroRecomendacion.filtra(episodio);
 
-        var peliculaDeJean = new Pelicula();
-        peliculaDeJean.setNombre("Rapidos y furiosos");
+        var peliculaDeJean = new Pelicula("Rapidos y furiosos", 2001);
         peliculaDeJean.setDuracionEnMinutos(200);
-        peliculaDeJean.setFechaDeLanzamiento(2001);
 
         ArrayList<Pelicula> listaDePeliculas = new ArrayList<>();
         listaDePeliculas.add(peliculaDeJean);
@@ -67,5 +59,7 @@ public class Principal {
         System.out.println("La primera pelicula es: "+listaDePeliculas.get(0).getNombre());
         System.out.println(listaDePeliculas);
         System.out.println("toString de la pelicula: "+listaDePeliculas.get(0).toString());
+
+
     }
 }
