@@ -4,7 +4,10 @@ import com.aluracursos.screenmatch.modelos.Pelicula;
 import com.aluracursos.screenmatch.modelos.Serie;
 import com.aluracursos.screenmatch.modelos.Titulo;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Collection;
+import java.util.Collections;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -28,6 +31,17 @@ public class PrincipalConListas {
                 System.out.println(pelicula.getClasificable());
             }
         }
+
+        ArrayList<String> listaDeArtistas = new ArrayList<>();
+        listaDeArtistas.add("Jorge Luna");
+        listaDeArtistas.add("Ricardo Mendoza");
+        listaDeArtistas.add("Jorge Benavides");
+        System.out.println(listaDeArtistas);
+        Collections.sort(listaDeArtistas);
+        System.out.println("Lista de artistas ordenada: "+listaDeArtistas);
+
+        Collections.sort(lista);
+        System.out.println("Lista de titulos ordenados: " + lista);
 
     }
 }
