@@ -5,10 +5,7 @@ import com.aluracursos.screenmatch.modelos.Serie;
 import com.aluracursos.screenmatch.modelos.Titulo;
 
 import java.lang.reflect.Array;
-import java.util.ArrayList;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Comparator;
+import java.util.*;
 
 public class PrincipalConListas {
     public static void main(String[] args) {
@@ -20,7 +17,7 @@ public class PrincipalConListas {
         peliculaDeJean.evalua(10);
         Serie casaDragon = new Serie("La casa del dragon", 2022);
 
-        ArrayList<Titulo> lista = new ArrayList<>();
+        List<Titulo> lista = new LinkedList<>();
         lista.add(miPelicula);
         lista.add(otraPelicula);
         lista.add(peliculaDeJean);
